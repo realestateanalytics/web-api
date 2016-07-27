@@ -20,6 +20,6 @@ var server = require('http').createServer(app);
 require('./routes')(app);
 
 // Start server
-server.listen(env.serverport, function () {
+server.listen(process.env.PORT || env.serverport, function () {
   console.log('Express server listening');
 });
